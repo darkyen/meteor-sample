@@ -1,0 +1,32 @@
+<head>
+  <title>auth0-meteor-sample</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.1.0/milligram.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Welcome to Auth0-Meteor Sample</h1>
+    <div>
+      {{#if currentUser}}
+        {{> user}}
+      {{else}}
+        {{> login}}
+      {{/if}}
+    </div>
+  </div>
+</body>
+
+<template name="user">
+  <h2><strong>{{user.profile.name}}</strong></h2>
+  <button>Logout</button>
+  <hr />
+  <h6><small><strong>Profile</strong></small></h6>
+  <code class="code">
+    {{stringUser}}
+  </code>
+</template>
+
+<template name="login">
+  <button>Login to Auth0</button>
+</template>

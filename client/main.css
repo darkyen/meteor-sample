@@ -1,0 +1,6 @@
+/* CSS declarations go here */
+.code{
+  display: block;
+  white-space: pre;
+  overflow-x: scroll;
+}
